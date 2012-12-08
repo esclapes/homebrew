@@ -3,7 +3,7 @@ require 'formula'
 # Documentation: https://github.com/mxcl/homebrew/wiki/Formula-Cookbook
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 
-class V < Formula
+class Ansible < Formula
   homepage 'http://ansible.cc/'
   url 'https://github.com/ansible/ansible/archive/v0.9.tar.gz'
   version '0.9'
@@ -16,11 +16,9 @@ class V < Formula
     ENV['PYTHONPATH'] = temp_site_packages
     
     args = [
-      "--no-user-cfg",
       "--verbose",
       "install",
       "--force",
-      "--single-version-externally-managed",
       "--install-scripts=#{bin}",
       "--install-lib=#{temp_site_packages}",
       "--install-data=#{share}",
